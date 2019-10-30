@@ -70,6 +70,7 @@ class Webhook
                 die();
             }
             if ($response->isOk) {
+                print_r('abrakadabra');
                 return $response->data['status'];
             }
         }
