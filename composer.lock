@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "578ab993d8bbfeb0003bcace9c2a0541",
+    "content-hash": "a39916b4963fdc6fe3228026ee4ef581",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
+                "url": "git@github.com:twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -33,7 +33,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -74,7 +74,7 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bestiejs/punycode.js.git",
+                "url": "git@github.com:bestiejs/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
@@ -848,6 +848,56 @@
                 "yii2"
             ],
             "time": "2019-07-16T13:22:50+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-httpclient",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-httpclient.git",
+                "reference": "05ecc99868352cf840173bfd8fe67bfd84b5f295"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/05ecc99868352cf840173bfd8fe67bfd84b5f295",
+                "reference": "05ecc99868352cf840173bfd8fe67bfd84b5f295",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.13"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.27|~5.7.21|^6.2"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\httpclient\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "HTTP client extension for the Yii framework",
+            "keywords": [
+                "curl",
+                "http",
+                "httpclient",
+                "yii2"
+            ],
+            "time": "2019-10-08T09:48:57+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -2952,12 +3002,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3dc050a9adab0081c8cd76c1b3274ed6d7b21a03"
+                "reference": "da3678e12c62d479777653e44653bf4e923fe7c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3dc050a9adab0081c8cd76c1b3274ed6d7b21a03",
-                "reference": "3dc050a9adab0081c8cd76c1b3274ed6d7b21a03",
+                "url": "https://api.github.com/repos/symfony/console/zipball/da3678e12c62d479777653e44653bf4e923fe7c2",
+                "reference": "da3678e12c62d479777653e44653bf4e923fe7c2",
                 "shasum": ""
             },
             "require": {
@@ -3020,7 +3070,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-12T00:35:04+00:00"
+            "time": "2019-10-30T13:23:44+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -3081,12 +3131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "55e88e379a2d905365e05aee0d40d9382c1eed1a"
+                "reference": "36bbcab9369fc2f583220890efd43bf262d563fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/55e88e379a2d905365e05aee0d40d9382c1eed1a",
-                "reference": "55e88e379a2d905365e05aee0d40d9382c1eed1a",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/36bbcab9369fc2f583220890efd43bf262d563fd",
+                "reference": "36bbcab9369fc2f583220890efd43bf262d563fd",
                 "shasum": ""
             },
             "require": {
@@ -3134,7 +3184,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-12T00:35:04+00:00"
+            "time": "2019-10-29T11:38:30+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3493,12 +3543,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "13bfb7f2460a3f34d7e3c054fef646ba67c2e351"
+                "reference": "8b24107fe8363d94ec6569217e0cc72664b8314c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/13bfb7f2460a3f34d7e3c054fef646ba67c2e351",
-                "reference": "13bfb7f2460a3f34d7e3c054fef646ba67c2e351",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/8b24107fe8363d94ec6569217e0cc72664b8314c",
+                "reference": "8b24107fe8363d94ec6569217e0cc72664b8314c",
                 "shasum": ""
             },
             "require": {
@@ -3544,7 +3594,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-22T15:44:54+00:00"
+            "time": "2019-10-30T13:23:44+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -3798,7 +3848,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "yiisoft/yii2-httpclient": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

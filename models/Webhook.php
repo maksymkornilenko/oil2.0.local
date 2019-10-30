@@ -3,6 +3,7 @@
 
 namespace app\models;
 use yii\helpers\Json;
+use yii\httpclient\Client;
 
 class Webhook
 {
@@ -43,15 +44,15 @@ class Webhook
 //                $order->updateAttributes(['status' => 1]);
 //            }
 //        }
-    }
+//    }
 
     public function sendOrder($id) {
         $order = Order::find()->where(['id' => $id])->one();
         if ($order) {
             $client = new Client();
-            $response = $this->createRequest()
+            $response = $client->createRequest()
                 ->setMethod('POST')
-                ->setUrl('http://crm.local/altlanding/webhook/md-de')
+                ->setUrl('http://crm.local/tilda/webhook/md-ru')
                 ->setData([
                     'id' => $order->id,
                     'createdAt' => $order->created_at,
@@ -63,8 +64,11 @@ class Webhook
                     'address' => $order->address,
                     'count' => $order->count,
                     'paid' => $order->paid,
-                ])
-                ->send();
+                ]);
+            if($response->send()){
+                var_dump('ok');
+                die();
+            }
             if ($response->isOk) {
                 return $response->data['status'];
             }

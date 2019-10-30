@@ -28,26 +28,25 @@ class SiteController extends Controller
     public function actionOrderSuccess($id)
     {
         $order = Order::find()->where(['id' => $id])->one();
-        $request=Webhook::sendData($id);
-        die();
-        if ($order) {
-            if ($order->paid == 0 && $order->pay_pal_id == '') {
-                $paypal = new PayPalApi();
-                $approvalUrl = $paypal->createInvoice($id);//$paypal->createInvoice($id);//$paypal->createPayPalOrder($id);//
-            } else if ($order->paid == 0) {
-                $approvalUrl = $order->pay_pal_url;
-            } else {
-                $approvalUrl = false;
-            }
-            if ($approvalUrl) {
-                Webhook::sendOrder($id);
-                return $this->render('orderSuccess', ['order' => $order, 'approvalUrl' => $approvalUrl]);
-            } else {
-                return $this->redirect('/order-error');
-            }
-        } else {
-            return $this->redirect('/order-error');
-        }
+//        if ($order) {
+//            if ($order->paid == 0 && $order->pay_pal_id == '') {
+//                $paypal = new PayPalApi();
+//                $approvalUrl = $paypal->createInvoice($id);//$paypal->createInvoice($id);//$paypal->createPayPalOrder($id);//
+//            } else if ($order->paid == 0) {
+//                $approvalUrl = $order->pay_pal_url;
+//            } else {
+//                $approvalUrl = false;
+//            }
+//            if ($approvalUrl) {
+//                Webhook::sendOrder($id);
+//                return $this->render('orderSuccess', ['order' => $order, 'approvalUrl' => $approvalUrl]);
+//            } else {
+//                return $this->redirect('/order-error');
+//            }
+//        } else {
+//            return $this->redirect('/order-error');
+//        }
+        Webhook::sendOrder($id);
     }
 
     public function actionOrderPSuccess()
