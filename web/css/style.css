@@ -2018,6 +2018,12 @@ Footer Section style
 .order-summ-block-add-text{
     font-size: 14px;
 }
+.order-price{
+    display: none;
+}
+.order-delivery-price{
+    display: none;
+}
 .btn-success{
     color: #411f1f;
     font-size: 18px;

@@ -77,6 +77,8 @@ class Order extends \yii\db\ActiveRecord
             'city' => Yii::t('app', 'City'),
             'address' => Yii::t('app', 'Address'),
             'count' => Yii::t('app', 'Count'),
+            'price' => Yii::t('app', 'Price'),
+            'delivery_price' => Yii::t('app', 'Delivery Price'),
         ];
     }
 }

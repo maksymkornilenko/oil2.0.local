@@ -2,6 +2,7 @@
 use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use app\models\Webhook;
 
 /* @var $this yii\web\View */
 
@@ -421,7 +422,7 @@ Modal::begin([
         </div>
         <div class="col-md-4 order-control-block">
             <div class="order-container">
-            <span class="order-control order-minus">&nbsp;</span><span class="order-count">1</span><span class="order-control order-plus">&nbsp;</span><span class="order-total">17</span><span class="order-currency"><?php echo Yii::t('app', 'currency'); ?></span>
+            <span class="order-control order-minus">&nbsp;</span><span class="order-count">1</span><span class="order-control order-plus">&nbsp;</span><span class="order-price"><?php echo Webhook::PRICE ?></span><span class="order-delivery-price"><?php echo Webhook::DELIVERY_PRICE ?></span><span class="order-total"><?php echo Webhook::PRICE ?></span><span class="order-currency"><?php echo Yii::t('app', 'currency'); ?></span>
             </div>
         </div>
     </div>

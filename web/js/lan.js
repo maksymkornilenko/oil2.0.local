@@ -18,8 +18,14 @@ $(document).ready(function() {
 
 function calculateTotalAndSumm(count) {
     $('#order-count').val(count);
-    total = count * 17;
-    summ = total + 5;
+    $('.order-total').text();
+    var price=$('.order-price').text();
+    var deliveryPrice=+$('.order-delivery-price').text();
+    console.log(deliveryPrice);
+    console.log(price);
+    total = count * price;
+    console.log(total);
+    summ = total + deliveryPrice;
     $('.order-total').text(total);
     $('.summ').text(summ);
     $('.order-summ').text(summ);
